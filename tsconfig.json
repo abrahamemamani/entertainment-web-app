@@ -32,7 +32,16 @@
       ],
       "@assets/*": [
         "src/assets/*"
-      ]
+      ],
+      "@redux/*": [
+        "src/redux/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@services/*": [
+        "src/services/*"
+      ],
     },
   },
   "include": [
