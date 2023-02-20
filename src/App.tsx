@@ -1,19 +1,14 @@
-import { useEffect } from 'react';
-import { Component } from '@components';
+import { Header } from '@components';
+import { useGetMoviesQuery } from '@services';
 
 function App (): JSX.Element {
-  useEffect(() => {
-    fetch('http://localhost:5173/api/data')
-      .then(async (response) => await response.json())
-      .then((data) => { console.log(data); })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  const { data, } = useGetMoviesQuery();
+
+  console.log({ data, });
 
   return (
     <div className="app">
-      <Component />
+      <Header />
     </div>
   );
 }

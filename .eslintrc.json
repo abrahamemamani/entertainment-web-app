@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:react/all"
     ],
     "overrides": [],
     "parserOptions": {
@@ -17,15 +18,16 @@
         "react"
     ],
     "rules": {
-        "@typescript-eslint/semi": [
-            "error",
-            "always"
-        ],
+        "space-before-function-paren": "off",
         "no-tabs": [
             "error",
             {
                 "allowIndentationTabs": true
             }
+        ],
+        "@typescript-eslint/semi": [
+            "error",
+            "always"
         ],
         "@typescript-eslint/member-delimiter-style": [
             "error",
@@ -43,10 +45,49 @@
                 "arrays": "always"
             }
         ],
-        "react/jsx-uses-react": "off",
+        "@typescript-eslint/space-before-function-paren": "off",
+        "@typescript-eslint/no-invalid-void-type": "off",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "interface",
+                "format": [
+                    "StrictPascalCase"
+                ]
+            }
+        ],
+        // "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
-        "space-before-function-paren": "off",
-        "@typescript-eslint/space-before-function-paren": "off"
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".tsx"
+                ]
+            }
+        ],
+        "react/jsx-props-no-spreading": [
+            "error",
+            {
+                "custom": "ignore"
+            }
+        ],
+        "react/jsx-indent": [
+            "error",
+            2
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            2
+        ],
+        "react/jsx-newline": [
+            "error",
+            {
+                "prevent": true
+            }
+        ]
     },
     "ignorePatterns": [
         "./vite.config.ts"
